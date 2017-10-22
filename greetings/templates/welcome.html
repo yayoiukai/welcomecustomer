@@ -1,0 +1,15 @@
+<html>
+<h1>show different categories to choose from</h1>
+<form action="{% url 'location' %}" name = "location" method="post" class="navbar-form form">
+    {% csrf_token %}
+    <input name='category1' type="text" id="category1" placeholder="" size="46">
+    <button type="submit" class="btn btn-sm btn-primary">Confirm</button>
+</form>
+
+<form action="{% url 'location' %}" name = "location" method="post" class="navbar-form form">
+    {% csrf_token %}
+    <input name='gift_category1' type="text" id="gift_category1" placeholder="" size="46">
+    <button type="submit" class="btn btn-sm btn-primary">Confirm</button>
+</form>
+
+</html>

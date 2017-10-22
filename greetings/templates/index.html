@@ -1,0 +1,7 @@
+<html>
+<form action="{% url 'welcome' %}" name = "welcome" method="post" class="navbar-form form">
+    {% csrf_token %}
+    <input name='phone_number' type="text" id="phone_number" placeholder="" size="46">
+    <button type="submit" class="btn btn-sm btn-primary">Ask For Consierge</button>
+</form>
+</html>
