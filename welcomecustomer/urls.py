@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 from greetings.views import index
 from greetings.views import welcome
@@ -25,4 +27,5 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^welcome/', welcome, name='welcome'),
     url(r'^location/', location, name='location'),
-]
+] + static(settings.COMPONENTS_URL,
+           document_root=settings.COMPONENTS_ROOT)

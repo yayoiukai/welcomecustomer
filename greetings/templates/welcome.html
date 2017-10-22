@@ -1,4 +1,5 @@
 <html>
+<body id="page-top" bgcolor="#8484B0">
 <h1>show different categories to choose from</h1>
 <form action="{% url 'location' %}" name = "location" method="post" class="navbar-form form">
     {% csrf_token %}
@@ -11,5 +12,6 @@
     <input name='gift_category1' type="text" id="gift_category1" placeholder="" size="46">
     <button type="submit" class="btn btn-sm btn-primary">Confirm</button>
 </form>
+</body>
 
 </html>
