@@ -1,0 +1,19 @@
+version: '2.0'
+services:
+    web:
+        build:
+            context: .
+        env_file: ./welcomecustomers.env
+        ports:
+            - "8000:8000"
+
+    db:
+        image: postgres:10.0
+        env_file: ./welcomecustomers.env
+        ports:
+            - "5432:5432"
+        volumes:
+            - dbdata:/var/lib/postgresql/data
+
+volumes:
+    dbdata: {}
