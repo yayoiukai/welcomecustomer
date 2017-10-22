@@ -14,7 +14,7 @@ def index(request):
 def welcome(request):
     category_form = CustomerCategoryForm
     gift_form = GiftCategoryForm
-    return render(request, 'welcome.html', {'caregory_form': category_form,
+    return render(request, 'grid.html', {'caregory_form': category_form,
                                             'gift_form': gift_form})
 
 
